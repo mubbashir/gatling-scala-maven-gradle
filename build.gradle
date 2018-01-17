@@ -1,0 +1,25 @@
+plugins {
+    id 'com.github.lkishalmi.gatling' version '0.7.1'
+}
+
+project.sourceSets {
+    gatling {
+        scala.srcDirs = ['src/test/gatling']
+        resources.srcDirs = ['src/test/resources/data', 'src/test/resources/bodies', 'src/test/resources/conf']
+    }
+}
+
+gatling {
+    sourceRoot = 'src/test'
+    simulationsDir = 'gatling/simulations'
+    dataDir = 'resources/data'
+    bodiesDir = 'resources/bodies'
+    confDir = 'resources/conf'
+    simulations = {
+        include "**/computerdatabase/*Simulation*.scala"
+    } //To pick all the Simulation in the package using groovy clousers 
+}
+
+repositories {
+    jcenter()
+}
