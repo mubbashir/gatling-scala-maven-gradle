@@ -14,7 +14,7 @@ or simply: `./gradlew gatlingRun`
 
 Open `build/reports/gatling/${SIMULATION_TIMESTAMP}/index.html`
 
-![smaple report](./doc_resources/gatling_report.jpg "Sample Report")
+![smaple report](.doc_resources/gatling_report.jpg "Sample Report")
 
 ## Maven
 
